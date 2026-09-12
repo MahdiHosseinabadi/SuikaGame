@@ -64,8 +64,8 @@ public class GameManager : MonoBehaviour
         if (touch.isInProgress)
         {
             Vector2 touchPosition = touch.screenPosition;
-            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(touchPosition.x, touchPosition.y, Camera.main.transform.position.z));
-
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(touchPosition.x, touchPosition.y, -Camera.main.transform.position.z));
+            
             float relocation = Mathf.Clamp(worldPosition.x, leftLimit, rightLimit);
             currentFruit.transform.position = new Vector3(relocation, spawnPoint.position.y, 0);
         }

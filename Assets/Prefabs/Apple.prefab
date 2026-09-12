@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -234,7 +234,7 @@ PolygonCollider2D:
       - {x: -0.585, y: -2.55}
       - {x: -0.275, y: -2.55}
       - {x: -0.065, y: -2.49}
-      - {x: 0.055, y: -2.49}
+      - {x: 0.03911295, y: -2.4804504}
     - - {x: 0.185, y: 1.66}
       - {x: 0.185, y: 1.6999999}
       - {x: 0.225, y: 1.68}

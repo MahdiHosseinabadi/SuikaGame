@@ -26,6 +26,7 @@ public class Fruit : MonoBehaviour
 
                 Vector3 mergePosition = (transform.position + otherFruit.transform.position) / 2;
                 GameManager.instance.MergeFruit(fruitLevel + 1, mergePosition);
+                ScoreManager.instance.AddScore((int)Mathf.Pow(2, fruitLevel) * 10);
                 Destroy(otherFruit.gameObject);
                 Destroy(gameObject);
             }
