@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3009642033040540712}
   - component: {fileID: -3043519787619066060}
   - component: {fileID: 7485984992341731360}
+  - component: {fileID: 3199509274585356134}
   m_Layer: 0
   m_Name: Grape
   m_TagString: Untagged
@@ -260,3 +261,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &3199509274585356134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7768914468113837677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c762775bcb45c8409ae7788724006ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Fruit
+  fruitLevel: 2

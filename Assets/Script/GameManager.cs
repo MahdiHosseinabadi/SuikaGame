@@ -16,6 +16,21 @@ public class GameManager : MonoBehaviour
     int currentFruitIndex;
     int nextFruitIndex;
 
+    public static GameManager instance;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
         currentFruitIndex = Random.Range(0, fruitPrefabs.Length);
@@ -30,6 +45,14 @@ public class GameManager : MonoBehaviour
         currentFruit.GetComponent<Rigidbody2D>().gravityScale = 0;
     }
 
+    public void MergeFruit(int nextLevel, Vector3 position)
+    {
+        if (nextLevel >= fruitPrefabs.Length) return;
+
+        GameObject newFruit = Instantiate(fruitPrefabs[nextLevel], position, Quaternion.identity);
+        newFruit.GetComponent<Fruit>().EnableMerge();
+    }
+
     void Update()
     {
         if (!currentFruit) return;
@@ -41,7 +64,7 @@ public class GameManager : MonoBehaviour
         if (touch.isInProgress)
         {
             Vector2 touchPosition = touch.screenPosition;
-            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(touchPosition);
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(touchPosition.x, touchPosition.y, Camera.main.transform.position.z));
 
             float relocation = Mathf.Clamp(worldPosition.x, leftLimit, rightLimit);
             currentFruit.transform.position = new Vector3(relocation, spawnPoint.position.y, 0);
@@ -56,9 +79,16 @@ public class GameManager : MonoBehaviour
             Rigidbody2D rigidBody = currentFruit.GetComponent<Rigidbody2D>();
             rigidBody.gravityScale = 1;
 
+            currentFruit.GetComponent<Fruit>().EnableMerge();
+
             currentFruit = null;
             Invoke(nameof(SpawnFruit), 0.7f);
         }
+    }
+
+    public bool LastFruit(int level)
+    {
+        return level >= fruitPrefabs.Length - 1;
     }
 
     void OnEnable()

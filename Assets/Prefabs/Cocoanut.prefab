@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1209914570468241259}
   - component: {fileID: 3105260948196818070}
   - component: {fileID: 2776677750228690061}
+  - component: {fileID: -6256951335581642105}
   m_Layer: 0
   m_Name: Cocoanut
   m_TagString: Untagged
@@ -258,3 +259,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &-6256951335581642105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001776622834564218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c762775bcb45c8409ae7788724006ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Fruit
+  fruitLevel: 7

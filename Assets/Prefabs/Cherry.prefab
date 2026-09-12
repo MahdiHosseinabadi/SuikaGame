@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8141023683511303563}
   - component: {fileID: 6376068201184224029}
   - component: {fileID: 8162871583871911205}
+  - component: {fileID: -2215255490389213450}
   m_Layer: 0
   m_Name: Cherry
   m_TagString: Untagged
@@ -393,3 +394,16 @@ PolygonCollider2D:
       - {x: 0.555, y: -2.8049998}
       - {x: 0.715, y: -2.7549999}
   m_UseDelaunayMesh: 1
+--- !u!114 &-2215255490389213450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6204855980437189110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c762775bcb45c8409ae7788724006ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Fruit
+  fruitLevel: 0
