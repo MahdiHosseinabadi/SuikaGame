@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.InputSystem.EnhancedTouch;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
@@ -11,6 +12,11 @@ public class GameManager : MonoBehaviour
     public float rightLimit = 2.3f;
     public Image nextFruitImage;
     public Sprite[] fruitSprite;
+    public Transform fruitParent;
+
+    public GameObject gameOverPanel;
+    public GameObject gameArea;
+
 
     GameObject currentFruit;
     int currentFruitIndex;
@@ -41,7 +47,7 @@ public class GameManager : MonoBehaviour
 
     void SpawnFruit()
     {
-        currentFruit = Instantiate(fruitPrefabs[currentFruitIndex], spawnPoint.position, Quaternion.identity);
+        currentFruit = Instantiate(fruitPrefabs[currentFruitIndex], spawnPoint.position, Quaternion.identity, fruitParent);
         currentFruit.GetComponent<Rigidbody2D>().gravityScale = 0;
     }
 
@@ -49,7 +55,7 @@ public class GameManager : MonoBehaviour
     {
         if (nextLevel >= fruitPrefabs.Length) return;
 
-        GameObject newFruit = Instantiate(fruitPrefabs[nextLevel], position, Quaternion.identity);
+        GameObject newFruit = Instantiate(fruitPrefabs[nextLevel], position, Quaternion.identity, fruitParent);
         newFruit.GetComponent<Fruit>().EnableMerge();
     }
 
@@ -65,7 +71,7 @@ public class GameManager : MonoBehaviour
         {
             Vector2 touchPosition = touch.screenPosition;
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(touchPosition.x, touchPosition.y, -Camera.main.transform.position.z));
-            
+
             float relocation = Mathf.Clamp(worldPosition.x, leftLimit, rightLimit);
             currentFruit.transform.position = new Vector3(relocation, spawnPoint.position.y, 0);
         }
@@ -89,6 +95,28 @@ public class GameManager : MonoBehaviour
     public bool LastFruit(int level)
     {
         return level >= fruitPrefabs.Length - 1;
+    }
+
+    public void GameOver()
+    {
+        ScoreManager.instance.ScoreGame();
+
+        gameArea.SetActive(false);
+        gameOverPanel.SetActive(true);
+
+        Time.timeScale = 0f;
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Home()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
     }
 
     void OnEnable()

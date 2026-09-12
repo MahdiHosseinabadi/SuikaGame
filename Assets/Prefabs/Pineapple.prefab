@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8004987754972188051}
   - component: {fileID: 2376864175236455319}
+  - component: {fileID: 645931078100996848}
   - component: {fileID: 4962707168017648903}
-  - component: {fileID: -2165530476742390313}
   - component: {fileID: -274743972726389790}
   m_Layer: 0
   m_Name: Pineapple
@@ -95,35 +95,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!50 &4962707168017648903
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8941434821987849435}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 1
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
---- !u!60 &-2165530476742390313
-PolygonCollider2D:
+--- !u!61 &645931078100996848
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -156,7 +129,7 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.023398876, y: -0.62007}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -166,125 +139,35 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.12, y: -2.79}
-      - {x: 1.25, y: -2.7}
-      - {x: 1.3, y: -2.6599998}
-      - {x: 1.52, y: -2.4299998}
-      - {x: 1.5899999, y: -2.33}
-      - {x: 1.66, y: -2.21}
-      - {x: 1.7673308, y: -1.9636655}
-      - {x: 1.8299999, y: -1.77}
-      - {x: 1.86, y: -1.66}
-      - {x: 1.899043, y: -1.4443829}
-      - {x: 1.908894, y: -1.3395295}
-      - {x: 1.9156172, y: -1.29}
-      - {x: 1.92, y: -0.93}
-      - {x: 1.91, y: -0.75}
-      - {x: 1.86, y: -0.39}
-      - {x: 1.7627414, y: -0.052465487}
-      - {x: 1.7199999, y: 0.089999996}
-      - {x: 1.63, y: 0.29}
-      - {x: 1.5899999, y: 0.37}
-      - {x: 1.4501379, y: 0.5775345}
-      - {x: 1.25, y: 0.81}
-      - {x: 1.0799999, y: 0.94}
-      - {x: 0.95, y: 1.02}
-      - {x: 0.87, y: 1.06}
-      - {x: 0.91744155, y: 1.1379492}
-      - {x: 0.98999995, y: 1.23}
-      - {x: 1.14, y: 1.38}
-      - {x: 1.281543, y: 1.4823046}
-      - {x: 1.4138477, y: 1.5682031}
-      - {x: 1.42, y: 1.64}
-      - {x: 1.3658985, y: 1.6997461}
-      - {x: 1.299746, y: 1.7197462}
-      - {x: 1.1858983, y: 1.7417967}
-      - {x: 0.98999995, y: 1.74}
-      - {x: 0.8812636, y: 1.7283189}
-      - {x: 0.7445777, y: 1.6840951}
-      - {x: 0.89, y: 1.9799999}
-      - {x: 0.96, y: 2.1}
-      - {x: 1.13, y: 2.31}
-      - {x: 1.17, y: 2.3799999}
-      - {x: 1.17, y: 2.4199998}
-      - {x: 1.11, y: 2.49}
-      - {x: 0.97999996, y: 2.49}
-      - {x: 0.88, y: 2.47}
-      - {x: 0.74, y: 2.4299998}
-      - {x: 0.56, y: 2.35}
-      - {x: 0.39539072, y: 2.2312891}
-      - {x: 0.36974612, y: 2.34}
-      - {x: 0.32999998, y: 2.51}
-      - {x: 0.29, y: 2.61}
-      - {x: 0.19, y: 2.82}
-      - {x: 0.089999996, y: 2.97}
-      - {x: 0, y: 3.05}
-      - {x: -0.049999997, y: 3.05}
-      - {x: -0.11974612, y: 2.9858983}
-      - {x: -0.19, y: 2.8899999}
-      - {x: -0.22, y: 2.85}
-      - {x: -0.32, y: 2.6599998}
-      - {x: -0.37, y: 2.54}
-      - {x: -0.42, y: 2.3799999}
-      - {x: -0.45, y: 2.19}
-      - {x: -0.57, y: 2.3}
-      - {x: -0.68, y: 2.35}
-      - {x: -0.81, y: 2.3999999}
-      - {x: -0.93, y: 2.44}
-      - {x: -1.17, y: 2.45}
-      - {x: -1.2376953, y: 2.3961523}
-      - {x: -1.2438478, y: 2.319746}
-      - {x: -1.1617968, y: 2.2261524}
-      - {x: -1.03, y: 2.07}
-      - {x: -0.89, y: 1.8499999}
-      - {x: -0.8266725, y: 1.7444314}
-      - {x: -0.79334, y: 1.6576953}
-      - {x: -0.96, y: 1.6999999}
-      - {x: -1.25, y: 1.6999999}
-      - {x: -1.36, y: 1.68}
-      - {x: -1.4258984, y: 1.66}
-      - {x: -1.4756446, y: 1.5982031}
-      - {x: -1.4656446, y: 1.5361522}
-      - {x: -1.39, y: 1.48}
-      - {x: -1.26, y: 1.41}
-      - {x: -1.178893, y: 1.3590648}
-      - {x: -1.1540598, y: 1.3316342}
-      - {x: -1.1405077, y: 1.3243555}
-      - {x: -0.94363815, y: 1.13}
-      - {x: -0.86891055, y: 1.0341827}
-      - {x: -1.1, y: 0.90999997}
-      - {x: -1.17, y: 0.84999996}
-      - {x: -1.38, y: 0.65}
-      - {x: -1.54, y: 0.45}
-      - {x: -1.62, y: 0.29999998}
-      - {x: -1.67, y: 0.21}
-      - {x: -1.75, y: 0.01}
-      - {x: -1.8, y: -0.14999999}
-      - {x: -1.8376997, y: -0.31901142}
-      - {x: -1.8383688, y: -0.33235052}
-      - {x: -1.8929467, y: -0.6613118}
-      - {x: -1.9173985, y: -0.96664596}
-      - {x: -1.91, y: -1.35}
-      - {x: -1.89, y: -1.49}
-      - {x: -1.8499999, y: -1.68}
-      - {x: -1.7594099, y: -1.9947052}
-      - {x: -1.62, y: -2.28}
-      - {x: -1.49, y: -2.48}
-      - {x: -1.25, y: -2.7}
-      - {x: -1.04, y: -2.84}
-      - {x: -0.93, y: -2.8899999}
-      - {x: -0.83, y: -2.9299998}
-      - {x: -0.63, y: -2.99}
-      - {x: -0.44, y: -3.03}
-      - {x: -0.25, y: -3.05}
-      - {x: -0.21, y: -3.06}
-      - {x: 0.29, y: -3.06}
-      - {x: 0.42999998, y: -3.03}
-      - {x: 0.76, y: -2.95}
-      - {x: 0.94, y: -2.8799999}
-  m_UseDelaunayMesh: 1
+  m_Size: {x: 3.2316298, y: 4.692668}
+  m_EdgeRadius: 0
+--- !u!50 &4962707168017648903
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8941434821987849435}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!114 &-274743972726389790
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -22,7 +22,8 @@ public class GameOverLine : MonoBehaviour
     IEnumerator GameOverTime()
     {
         yield return new WaitForSeconds(2f);
-        Debug.Log("Game Over");
+
+        GameManager.instance.GameOver();
     }
 
     void OnTriggerExit2D(Collider2D collision)
