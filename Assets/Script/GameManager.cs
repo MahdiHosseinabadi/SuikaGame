@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
             currentFruit.transform.position = new Vector3(relocation, spawnPoint.position.y, 0);
         }
 
-        if (touch.phase == UnityEngine.InputSystem.TouchPhase.Ended || touch.phase == UnityEngine.InputSystem.TouchPhase.Canceled)
+        if (touch.phase == UnityEngine.InputSystem.TouchPhase.Ended)
         {
             currentFruitIndex = nextFruitIndex;
             nextFruitIndex = Random.Range(0, fruitPrefabs.Length);
