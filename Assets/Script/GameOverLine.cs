@@ -23,7 +23,7 @@ public class GameOverLine : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
 
-        GameManager.instance.GameOver();
+        UIManager.instance.GameOver();
     }
 
     void OnTriggerExit2D(Collider2D collision)

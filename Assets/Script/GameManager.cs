@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.InputSystem.EnhancedTouch;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
@@ -14,10 +13,6 @@ public class GameManager : MonoBehaviour
     public Sprite[] fruitSprite;
     public Transform fruitParent;
 
-    public GameObject gameOverPanel;
-    public GameObject gameArea;
-
-
     GameObject currentFruit;
     int currentFruitIndex;
     int nextFruitIndex;
@@ -26,15 +21,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        instance = this;
     }
 
     void Start()
@@ -56,7 +43,9 @@ public class GameManager : MonoBehaviour
         if (nextLevel >= fruitPrefabs.Length) return;
 
         GameObject newFruit = Instantiate(fruitPrefabs[nextLevel], position, Quaternion.identity, fruitParent);
+        AudioManager.instance.PlaySound(SoundType.MergeSound);
         newFruit.GetComponent<Fruit>().EnableMerge();
+        newFruit.AddComponent<PopAnimationFruit>();
     }
 
     void Update()
@@ -86,6 +75,7 @@ public class GameManager : MonoBehaviour
             rigidBody.gravityScale = 1;
 
             currentFruit.GetComponent<Fruit>().EnableMerge();
+            AudioManager.instance.PlaySound(SoundType.DropSound);
 
             currentFruit = null;
             Invoke(nameof(SpawnFruit), 0.7f);
@@ -95,28 +85,6 @@ public class GameManager : MonoBehaviour
     public bool LastFruit(int level)
     {
         return level >= fruitPrefabs.Length - 1;
-    }
-
-    public void GameOver()
-    {
-        ScoreManager.instance.ScoreGame();
-
-        gameArea.SetActive(false);
-        gameOverPanel.SetActive(true);
-
-        Time.timeScale = 0f;
-    }
-
-    public void RestartGame()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    public void Home()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
     }
 
     void OnEnable()

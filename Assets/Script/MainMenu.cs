@@ -14,11 +14,13 @@ public class MainMenu : MonoBehaviour
 
     public void SceneStart()
     {
+        AudioManager.instance.PlaySound(SoundType.ButtonSound);
         SceneManager.LoadScene(1);
     }
 
     public void Exit()
     {
+        AudioManager.instance.PlaySound(SoundType.ButtonSound);
         Application.Quit();
         Debug.Log("Exit");
     }

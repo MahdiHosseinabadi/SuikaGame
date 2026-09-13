@@ -4,6 +4,7 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public int score = 0;
+
     public TMP_Text scoreText;
     public TMP_Text gameOverScoreText;
     public TMP_Text bestScoreText;
@@ -12,15 +13,7 @@ public class ScoreManager : MonoBehaviour
 
     void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        instance = this;
     }
 
     public void AddScore(int value)
@@ -37,8 +30,21 @@ public class ScoreManager : MonoBehaviour
         if (score >= bestScore)
         {
             bestScore = score;
+
             PlayerPrefs.SetInt("BestScore", bestScore);
+            PlayerPrefs.Save();
+
+            AudioManager.instance.PlaySound(SoundType.NewRecordSound);
         }
+
         bestScoreText.text = bestScore.ToString();
+    }
+
+    public void ResetBestScore()
+    {
+        PlayerPrefs.SetInt("BestScore", 0);
+        PlayerPrefs.Save();
+
+        bestScoreText.text = "0";
     }
 }
