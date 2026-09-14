@@ -27,7 +27,7 @@ public class ScoreManager : MonoBehaviour
         gameOverScoreText.text = score.ToString();
         int bestScore = PlayerPrefs.GetInt("BestScore", 0);
 
-        if (score >= bestScore)
+        if (score > bestScore)
         {
             bestScore = score;
 
@@ -40,11 +40,22 @@ public class ScoreManager : MonoBehaviour
         bestScoreText.text = bestScore.ToString();
     }
 
-    public void ResetBestScore()
+    public void TotalMarge()
+    {
+        int totalMarge = PlayerPrefs.GetInt("TotalMarge", 0);
+        totalMarge++;
+        PlayerPrefs.SetInt("TotalMarge", totalMarge);
+        PlayerPrefs.Save();
+    }
+
+    public void ResetAllData()
     {
         PlayerPrefs.SetInt("BestScore", 0);
+        PlayerPrefs.SetInt("TotalGame", 0);
+        PlayerPrefs.SetInt("TotalMarge", 0);
         PlayerPrefs.Save();
 
         bestScoreText.text = "0";
+        gameOverScoreText.text = "0";
     }
 }
