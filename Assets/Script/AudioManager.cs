@@ -28,7 +28,12 @@ public class Sound
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioSource audioSource;
+    public AudioSource sfxSource;
+    public AudioSource musicSource;
+
+    public AudioClip mainMenuMusic;
+    public AudioClip gameMusic;
+    
     public Sound[] sounds;
 
     Dictionary<SoundType, Sound> SoundDictionary;
@@ -68,8 +73,14 @@ public class AudioManager : MonoBehaviour
 
         LastPlayTime[type] = Time.time;
 
-        audioSource.pitch = sound.pitch;
-        audioSource.PlayOneShot(sound.clip, sound.volume);
+        sfxSource.pitch = sound.pitch;
+        sfxSource.PlayOneShot(sound.clip, sound.volume);
+    }
+
+    public void PlayMusic(AudioClip music)
+    {
+        musicSource.clip = music;
+        musicSource.Play();
     }
 }
 

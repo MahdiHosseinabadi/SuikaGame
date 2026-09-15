@@ -6,8 +6,6 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject gameArea;
 
-    public bool IsPaused { get; private set; }
-
     public static UIManager instance;
 
     void Awake()
@@ -30,6 +28,7 @@ public class UIManager : MonoBehaviour
     {
         AudioManager.instance.PlaySound(SoundType.ButtonSound);
         Time.timeScale = 1f;
+        AudioManager.instance.musicSource.Stop();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -37,6 +36,7 @@ public class UIManager : MonoBehaviour
     {
         AudioManager.instance.PlaySound(SoundType.ButtonSound);
         Time.timeScale = 1f;
+        AudioManager.instance.musicSource.Stop();
         SceneManager.LoadScene(0);
     }
 }

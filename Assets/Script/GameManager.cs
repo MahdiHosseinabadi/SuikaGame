@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
         nextFruitIndex = Random.Range(0, fruitPrefabs.Length);
         nextFruitImage.sprite = fruitSprite[nextFruitIndex];
         SpawnFruit();
+
+        AudioManager.instance.musicSource.Stop();
+        AudioManager.instance.PlayMusic(AudioManager.instance.gameMusic);
     }
 
     void SpawnFruit()

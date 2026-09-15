@@ -1,19 +1,30 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
     public TMP_Text bestScoreText;
+
     public GameObject recordPanel;
     public TMP_Text bestScoreTextPanel;
     public TMP_Text totalGameTextPanel;
     public TMP_Text totalMargeTextPanel;
+    public GameObject settingPanel;
+    public Slider volumeSlider;
+    public Toggle musicToggle;
 
     void Start()
     {
         int bestScore = PlayerPrefs.GetInt("BestScore", 0);
         bestScoreText.text = bestScore.ToString();
+
+        float saveVolume = PlayerPrefs.GetFloat("Volume", 1f);
+        AudioListener.volume = saveVolume;
+        volumeSlider.value = saveVolume;
+
+        AudioManager.instance.PlayMusic(AudioManager.instance.mainMenuMusic);
     }
 
     public void SceneStart()
@@ -43,10 +54,36 @@ public class MainMenu : MonoBehaviour
         totalMargeTextPanel.text = totalMarge.ToString();
     }
 
-    public void CloseRecord()
+    public void OpenSetting()
+    {
+        AudioManager.instance.PlaySound(SoundType.ButtonSound);
+        settingPanel.SetActive(true);
+    }
+
+    public void ClosePanel()
     {
         AudioManager.instance.PlaySound(SoundType.ButtonSound);
         recordPanel.SetActive(false);
+        settingPanel.SetActive(false);
+    }
+
+    public void ChangeVolume()
+    {
+        AudioListener.volume = volumeSlider.value;
+        PlayerPrefs.SetFloat("Volume", volumeSlider.value);
+        PlayerPrefs.Save();
+    }
+
+    // public void ChangeMusicVolume()
+    // {
+    //     AudioManager.instance.musicSource.volume = volumeSlider.value;
+    //     PlayerPrefs.SetFloat("Volume", volumeSlider.value);
+    //     PlayerPrefs.Save();
+    // }
+
+    public void MusicToggle()
+    {
+        
     }
 
     public void ResetData()
