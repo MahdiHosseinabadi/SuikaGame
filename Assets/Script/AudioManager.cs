@@ -5,6 +5,7 @@ public enum SoundType
 {
     DropSound,
     MergeSound,
+    Break,
     ButtonSound,
     NewRecordSound,
     GameOverSound
@@ -83,5 +84,3 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 }
-
-

@@ -7,8 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public GameObject[] fruitPrefabs;
     public Transform spawnPoint;
-    public float leftLimit = -2.3f;
-    public float rightLimit = 2.3f;
+    public float leftLimit = -2.4f;
+    public float rightLimit = 2.4f;
     public Image nextFruitImage;
     public Sprite[] fruitSprite;
     public Transform fruitParent;
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
         if (touch.isInProgress)
         {
             Vector2 touchPosition = touch.screenPosition;
-            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(touchPosition.x, touchPosition.y, 0));
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(touchPosition.x, touchPosition.y, -Camera.main.transform.position.z));
 
             float relocation = Mathf.Clamp(worldPosition.x, leftLimit, rightLimit);
             currentFruit.transform.position = new Vector3(relocation, spawnPoint.position.y, 0);

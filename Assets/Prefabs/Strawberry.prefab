@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -5915764051612735233}
   - component: {fileID: 7073826263250367639}
   - component: {fileID: -4644114944326339304}
+  - component: {fileID: 8096115394023069880}
   m_Layer: 0
   m_Name: Strawberry
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -129,7 +130,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.053192973, y: -0.106384635}
+  m_Offset: {x: 0.02709794, y: -0.16911745}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -139,7 +140,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.4889147, y: 3.9369857}
+  m_Size: {x: 1.9218917, y: 4.572645}
   m_EdgeRadius: 0
 --- !u!50 &7073826263250367639
 Rigidbody2D:
@@ -181,3 +182,138 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fruit
   fruitLevel: 1
+--- !u!60 &8096115394023069880
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66489038582860721}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.34, y: 5.32}
+    newSize: {x: 4.34, y: 5.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.88, y: -2.3}
+      - {x: 1.1999999, y: -1.99}
+      - {x: 1.4, y: -1.76}
+      - {x: 1.52, y: -1.61}
+      - {x: 1.67, y: -1.41}
+      - {x: 1.81, y: -1.1899999}
+      - {x: 1.88, y: -1.0699999}
+      - {x: 2, y: -0.82}
+      - {x: 2.06, y: -0.7}
+      - {x: 2.1, y: -0.53}
+      - {x: 2.1499999, y: -0.29999998}
+      - {x: 2.1699998, y: -0.11}
+      - {x: 2.1699998, y: 0.25}
+      - {x: 2.1499999, y: 0.44}
+      - {x: 2.1, y: 0.66999996}
+      - {x: 2.01, y: 0.94}
+      - {x: 1.9, y: 1.13}
+      - {x: 1.77, y: 1.29}
+      - {x: 1.62, y: 1.4499999}
+      - {x: 1.54, y: 1.53}
+      - {x: 1.3199999, y: 1.6899999}
+      - {x: 1.25, y: 1.7199999}
+      - {x: 1.3399999, y: 1.8299999}
+      - {x: 1.31, y: 1.93}
+      - {x: 1.25, y: 1.9799999}
+      - {x: 1.04, y: 2.08}
+      - {x: 0.88585865, y: 2.086285}
+      - {x: 0.8178016, y: 2.095603}
+      - {x: 0.6933512, y: 2.1145039}
+      - {x: 0.42329752, y: 2.0934048}
+      - {x: 0.28890085, y: 2.101153}
+      - {x: 0.14, y: 2.08}
+      - {x: 0.089999996, y: 2.08}
+      - {x: 0.14109036, y: 2.1009102}
+      - {x: 0.17763588, y: 2.0999527}
+      - {x: 0.18192647, y: 2.0865865}
+      - {x: 0.35309938, y: 2.0287933}
+      - {x: 0.4845347, y: 2.1387932}
+      - {x: 0.20309934, y: 2.0780756}
+      - {x: 0.041908495, y: 2.111648}
+      - {x: -0.29667193, y: 1.9697397}
+      - {x: -0.19999999, y: 2.0202703}
+      - {x: -0.33414033, y: 2.0773444}
+      - {x: -0.22073449, y: 2.1059597}
+      - {x: -0.26, y: 2.110163}
+      - {x: -0.42, y: 2.11}
+      - {x: -0.53999996, y: 2.11}
+      - {x: -0.77, y: 2.08}
+      - {x: -0.91999996, y: 2.04}
+      - {x: -1.01, y: 2.01}
+      - {x: -1.13, y: 1.9599999}
+      - {x: -1.27, y: 1.87}
+      - {x: -1.39, y: 1.77}
+      - {x: -1.43, y: 1.6999999}
+      - {x: -1.4399999, y: 1.63}
+      - {x: -1.41, y: 1.54}
+      - {x: -1.51, y: 1.48}
+      - {x: -1.5899999, y: 1.41}
+      - {x: -1.78, y: 1.22}
+      - {x: -1.8399999, y: 1.15}
+      - {x: -1.9399999, y: 0.98999995}
+      - {x: -2.06, y: 0.74}
+      - {x: -2.07, y: 0.66999996}
+      - {x: -2.11, y: 0.57}
+      - {x: -2.1499999, y: 0.39}
+      - {x: -2.1699998, y: 0.16}
+      - {x: -2.1699998, y: -0.19999999}
+      - {x: -2.1499999, y: -0.35}
+      - {x: -2.11, y: -0.56}
+      - {x: -2.06, y: -0.75}
+      - {x: -1.9799999, y: -0.95}
+      - {x: -1.8299999, y: -1.24}
+      - {x: -1.6899999, y: -1.4499999}
+      - {x: -1.48, y: -1.7099999}
+      - {x: -1.0699999, y: -2.1299999}
+      - {x: -0.88, y: -2.29}
+      - {x: -0.78, y: -2.37}
+      - {x: -0.744828, y: -2.242758}
+      - {x: -0.8816731, y: -2.2186916}
+      - {x: -0.83196425, y: -2.2386174}
+      - {x: -0.84342474, y: -2.2233183}
+      - {x: -0.5315277, y: -2.3388362}
+      - {x: -0.15109132, y: -2.258545}
+      - {x: 0.23992708, y: -2.3489082}
+      - {x: 0.5986209, y: -2.3720691}
+      - {x: 0.7718971, y: -2.429828}
+      - {x: 0.8296557, y: -2.372068}
+      - {x: 0.58, y: -2.51}
+  m_UseDelaunayMesh: 1

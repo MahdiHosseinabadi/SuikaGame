@@ -15,6 +15,13 @@ public class MainMenu : MonoBehaviour
     public Slider volumeSlider;
     public Toggle musicToggle;
 
+    public static MainMenu instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
         int bestScore = PlayerPrefs.GetInt("BestScore", 0);
@@ -74,16 +81,14 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    // public void ChangeMusicVolume()
-    // {
-    //     AudioManager.instance.musicSource.volume = volumeSlider.value;
-    //     PlayerPrefs.SetFloat("Volume", volumeSlider.value);
-    //     PlayerPrefs.Save();
-    // }
-
     public void MusicToggle()
     {
-        
+        AudioManager.instance.musicSource.mute = !musicToggle.isOn;
+        PlayerPrefs.SetInt("MusicMute", musicToggle.isOn ? 0 : 1);
+        PlayerPrefs.Save();
+        int mute = PlayerPrefs.GetInt("MusicMute", 0);
+        musicToggle.isOn = (mute == 0);
+        AudioManager.instance.musicSource.mute = (mute == 1);
     }
 
     public void ResetData()
