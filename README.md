@@ -1,7 +1,7 @@
 # 🍉 Suika Game
 
 <p align="center">
-  <img src="Images/icon.png" width="200" alt="Suika Game Icon">
+  <img src="Images/icon.png" width="150" alt="Suika Game Icon">
 </p>
 
 <h1 align="center">🍉 Suika Game</h1>
