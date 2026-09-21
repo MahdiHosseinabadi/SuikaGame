@@ -57,9 +57,9 @@ The game features touch controls, fruit merging mechanics, sound effects, backgr
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="Images/screenshot-1.png" width="260" alt="Suika Game Main Menu">
-  <img src="Images/screenshot-2.png" width="260" alt="Suika Game Gameplay">
-  <img src="Images/screenshot-3.png" width="260" alt="Suika Game Game Over">
+  <img src="Images/screenshot-1.png" width="270" alt="Suika Game Main Menu">
+  <img src="Images/screenshot-2.png" width="270" alt="Suika Game Gameplay">
+  <img src="Images/screenshot-3.png" width="270" alt="Suika Game Game Over">
 </p>
 
 ---
