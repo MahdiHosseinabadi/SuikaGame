@@ -57,9 +57,9 @@ The game features touch controls, fruit merging mechanics, sound effects, backgr
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="Images/screenshot-1.png" width="320" alt="Suika Game Main Menu">
-  <img src="Images/screenshot-2.png" width="320" alt="Suika Game Gameplay">
-  <img src="Images/screenshot-3.png" width="320" alt="Suika Game Game Over">
+  <img src="Images/screenshot-1.png" width="310" alt="Suika Game Main Menu">
+  <img src="Images/screenshot-2.png" width="310" alt="Suika Game Gameplay">
+  <img src="Images/screenshot-3.png" width="310" alt="Suika Game Game Over">
 </p>
 
 ---
@@ -144,7 +144,7 @@ Press the **Play** button in Unity.
   <img src="Images/gameplay-preview.gif" width="600" alt="Gameplay Preview">
 </p>
 
-The gameplay preview demonstrates the core fruit-dropping and merging mechanics.
+Displays a preview of recession features and game settings.
 
 ---
 
